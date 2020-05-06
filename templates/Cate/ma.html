@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #C5B358;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 5;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+
+  <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- Links -->
+            <a href="art">Art</a>
+            <a href="logos">Logos</a>
+            <a href="wtt">Womens T-shirts & Tanks</a>
+            <a href="wt">Womens Tops</a>
+            <a href="woj">Womens Outwear & Jackets</a>
+            <a href="wsc">Womens Sweaters & Cardigans</a>
+            <a href="wj">Womens Jeans</a>
+            <a href="wl">Womens Leggings</a>
+            <a href="wp">Womens Pants</a>
+            <a href="wss">Womens Skirts & Shorts</a>
+            <a href="wa">Womens Accessories</a>
+            <a href="whss">Womens Hoodies and Sweat Shirts</a>
+            <a href="wsp">Womens Supplies</a>
+            <a href="mtt">Mens T-shirts & Tanks</a>
+            <a href="mt">Mens Tops</a>
+            <a href="moj">Mens Outwear & Jackets</a>
+            <a href="msc">Mens Sweaters & Cardigans</a>
+            <a href="ms">Mens Shirts</a>
+            <a href="mp">Mens Pants</a>
+            <a href="ma">Mens Accessories</a>
+            <a href="mhss">Mens Hoodies and Sweat Shirts</a>
+            <a href="msp">Mens Supplies</a>
+            <a href="utt">Unisex T-shirts & Tanks</a>
+            <a href="ut">Unisex Tops</a>
+            <a href="uhss">Unisex Hoodies and Sweat Shirts</a>
+            <a href="uoj">Unisex Outwear & Jackets</a>
+            <a href="usc">Unisex Sweaters & Cardigans</a>
+            <a href="uj">Unisex Jeans</a>
+            <a href="ul">Unisex Leggings</a>
+            <a href="up">Unisex Pants</a>
+            <a href="uss">Unisex Skirts & Shorts</a>
+            <a href="ua">Unisex Accessories</a>
+            <a href="usp">Unisex Supplies</a>
+  </div>
+  <div id="main">
+    <h2 style="color: #C5B358">Live Beyond The Box</h2>
+    <p></p>
+    <span style="font-size:30px;cursor:pointer;color: #C5B358" onclick="openNav()">&#9776; Open</span>
+
+    <!-- Whole Website Start -->
+    <main>
+      <div class="container">
+        <div>
+        <form class="form-inline"> </form>
+        </div>
+      <!-- Collapsible content -->
+
+
+      <!--/.Navbar-->
+      <!-- Mission Statement, etcc.-->
+      <span style="font-size: 25px;font-family: sans-serif;color:#C5B358 ">
+        Vision:<br/><br/>
+        "Urban high quality street fashion for those living beyond society's standards.
+        The purpose of these products are to help and encourage evolution from our current situations
+        and maintain a positive & healthy lifestyle! Every design has a specific meaning that enhanced
+        the awareness of our daily activities. Stay tuned for me!"</span> <br/>
+      <br/><br/>
+      <span style="font-size: 25px;font-family: sans-serif;color:#C5B358 ">Mission:</span> <br/>
+      <br/><br/>
+      <span style="font-size: 25px;font-family: sans-serif;color:#C5B358 ">Focus:</span> <br/>
+      <br/><br/>
+
+
+
+      <!--Section: Products v.3-->
+<section class="text-center mb-4">
+  <div class="row wow fadeIn">
+
+    {% for item in object_list %}
+    {% if item.get_category_display == 'Logos' %}
+
+
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <div class="card">
+
+        <div class="view overlay">
+          {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top" {% endcomment %}
+          <img src="{{ item.image.url }}" class="card-img-top">
+          <a href="{{ item.get_absolute_url }}">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+
+        </div>
+
+        <div class="card-body text-center">
+          <a href="" class="grey-text">
+            <h5>
+              {% if item.get_category_display == 'Logos' %}
+              {{ item.get_category_display }}
+              {% endif %}
+
+            </h5>
+          </a>
+          <h5>
+            <strong>
+              <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                <span class="badge badge-pill {{ item.get_label_display }}-color">NEW</span>
+              </a>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>$
+            {% if item.discount_price %}
+            {{ item.discount_price }}
+            {% else %}
+            {{ item.price }}
+            {% endif %}
+            </strong>
+          </h4>
+
+        </div>
+
+      </div>
+
+    </div>
+       {% endif %}
+      {% endfor %}
+  </div>
+
+</section>
+
+      <!--Section: Products v.3-->
+
+      <!--Pagination-->
+
+      {% if is_paginated %}
+      <nav class="d-flex justify-content-center wow fadeIn">
+        <ul class="pagination pg-blue">
+
+          {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {% endif %}
+
+          <li class="page-item active">
+            <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+
+    </div>
+  </main>
+
+    <!-- Whole Website End -->
+
+  </div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+
+{% endblock content %}
+
+
