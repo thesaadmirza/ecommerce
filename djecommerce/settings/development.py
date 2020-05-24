@@ -42,7 +42,6 @@ DEBUG_TOOLBAR_CONFIG = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        #'NAME': os.path.join(BASE_DIR, 'tylersdatabase_one'),
         'NAME': os.path.join('tylersdatabase_one'),
         'USER': 'mcadmin',
         'PASSWORD': 'lollypop33',
@@ -58,7 +57,6 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': os.path.join(BASE_DIR, 'tylersdatabase_one'),
         'NAME': os.path.join('d3u85pr3rhajlb'),
         'USER': 'egviqwdcbgawxg',
         'PASSWORD': '47ec3907b02e0a1ecbe609f41cfb923cf4920206f27cc0dd727dc75790e965ff',
@@ -68,8 +66,6 @@ DATABASES = {
 
     }
 }
-
-
 
 STRIPE_PUBLIC_KEY = 'STRIPE_LIVE_PUBLIC_KEY'
 STRIPE_SECRET_KEY = 'STRIPE_LIVE_PUBLIC_KEY'
