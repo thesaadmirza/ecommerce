@@ -2,7 +2,7 @@ import dj_database_url
 
 from .base import *
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['ty-one.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS += [
@@ -54,8 +54,6 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 STRIPE_PUBLIC_KEY = ''
 STRIPE_SECRET_KEY = ''
