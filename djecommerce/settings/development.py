@@ -1,5 +1,6 @@
 import dj_database_url
 
+
 from .base import *
 
 DEBUG = False
@@ -54,5 +55,5 @@ DATABASES = {
 
 
 
-STRIPE_PUBLIC_KEY = ''
-STRIPE_SECRET_KEY = ''
+STRIPE_PUBLIC_KEY = 'STRIPE_LIVE_PUBLIC_KEY'
+STRIPE_SECRET_KEY = 'STRIPE_LIVE_PUBLIC_KEY'
