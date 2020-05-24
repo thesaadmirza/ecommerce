@@ -4,7 +4,6 @@
     <list default="true" id="74d35151-888f-40a4-a459-0ed87938d753" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djecommerce/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djecommerce/settings/development.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/development.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djecommerce/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/production.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
