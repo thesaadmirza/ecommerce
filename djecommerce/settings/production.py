@@ -18,7 +18,7 @@ DATABASES = {
         'USER': config('egviqwdcbgawxg'),
         'PASSWORD': config('47ec3907b02e0a1ecbe609f41cfb923cf4920206f27cc0dd727dc75790e965ff'),
         'HOST': config('ec2-3-91-139-25.compute-1.amazonaws.com'),
-        'PORT': '5432'
+        'PORT': ''
     }
 }
 
