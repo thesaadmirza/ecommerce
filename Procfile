@@ -1,1 +1,1 @@
-web: gunicorn djecommerce.wsgi:application --log-file - --log-level debug
+web: gunicorn djecommerce.wsgi:application --preload --workers 1
