@@ -2,7 +2,7 @@ import dj_database_url
 
 from .base import *
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['ty-one.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS += [
