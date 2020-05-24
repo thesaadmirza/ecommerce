@@ -41,6 +41,22 @@ DEBUG_TOOLBAR_CONFIG = {
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        #'NAME': os.path.join(BASE_DIR, 'tylersdatabase_one'),
+        'NAME': os.path.join('tylersdatabase_one'),
+        'USER': 'mcadmin',
+        'PASSWORD': 'lollypop33',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+
+    }
+}
+
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         #'NAME': os.path.join(BASE_DIR, 'tylersdatabase_one'),
         'NAME': os.path.join('d3u85pr3rhajlb'),
