@@ -1,7 +1,7 @@
 from .base import *
 import dj_database_url
 
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 AUTH_PASSWORD_VALIDATORS = [
