@@ -1,1 +1,1 @@
-web: gunicorn djecommerce.wsgi:application --preload --workers 1
+xweb: gunicorn djecommerce.wsgi:application --preload --workers 1

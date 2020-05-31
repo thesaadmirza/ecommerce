@@ -4,7 +4,7 @@ import dj_database_url
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['ty-one.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS += [
    'debug_toolbar'
@@ -43,8 +43,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.path.join('tylersdatabase_one'),
-        'USER': 'mcadmin',
-        'PASSWORD': 'lollypop33',
+        'USER': 'root',
+        'PASSWORD': '1aladem1',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
@@ -56,12 +56,12 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.path.join('d3u85pr3rhajlb'),
-        'USER': 'egviqwdcbgawxg',
-        'PASSWORD': '47ec3907b02e0a1ecbe609f41cfb923cf4920206f27cc0dd727dc75790e965ff',
-        'HOST': 'ec2-3-91-139-25.compute-1.amazonaws.com',
-        'PORT': '',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': os.path.join('d3u85pr3rhajlb'),
+        # 'USER': 'egviqwdcbgawxg',
+        # 'PASSWORD': '47ec3907b02e0a1ecbe609f41cfb923cf4920206f27cc0dd727dc75790e965ff',
+        # 'HOST': 'ec2-3-91-139-25.compute-1.amazonaws.com',
+        # 'PORT': '',
 
 
     }
